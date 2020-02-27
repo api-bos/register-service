@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/libs/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/META-INF/maven/org.example/bit-proj-library/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/META-INF/maven/org.example/bit-proj-library/pom.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bit_proj_library_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/org/bit/proj-library/1.0-SNAPSHOT/proj-library-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/org/bit/proj-library/1.0-SNAPSHOT/proj-library-1.0-SNAPSHOT.pom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/register-service.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +33,19 @@
     </option>
   </component>
   <component name="ProjectId" id="1YEgUv3H3IvTojmS26f7KqcuQOC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/bca" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,11 +84,18 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="391" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582516048340">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="391" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1582516048339" />
+    <state x="192" y="0" key="CommitChangelistDialog2" timestamp="1582779021375">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="192" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582779021375" />
     <state x="346" y="81" key="FileChooserDialogImpl" timestamp="1582773450087">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
