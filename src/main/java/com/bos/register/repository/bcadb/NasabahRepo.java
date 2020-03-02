@@ -1,6 +1,6 @@
-package com.bos.register.repository;
+package com.bos.register.repository.bcadb;
 
-import com.bos.register.entity.NasabahDim;
+import com.bos.register.entity.bcaent.NasabahDim;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

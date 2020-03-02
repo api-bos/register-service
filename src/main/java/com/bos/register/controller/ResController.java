@@ -2,7 +2,7 @@ package com.bos.register.controller;
 
 import bca.bit.proj.library.base.ResultEntity;
 import com.bos.register.dto.RegisterField;
-import com.bos.register.entity.NasabahDim;
+import com.bos.register.entity.bcaent.NasabahDim;
 import com.bos.register.entity.testCLK;
 import com.bos.register.service.RegiService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.bos.register.repository;
+package com.bos.register.repository.bosdb;
 
-import com.bos.register.entity.SellerDim;
+import com.bos.register.entity.bosent.SellerDim;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

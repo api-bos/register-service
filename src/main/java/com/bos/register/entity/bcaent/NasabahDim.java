@@ -1,4 +1,4 @@
-package com.bos.register.entity;
+package com.bos.register.entity.bcaent;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
@@ -12,21 +12,24 @@ import javax.persistence.Table;
 
 @Entity
 @Builder
-@Table(name = "otp_dummy", schema = "public")
+@Table(name = "nasabah_dummy", schema = "public")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class OTPDim {
+public class NasabahDim {
     @Id
     @Column(name = "id")
-    private String id;
+    private Integer id;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "card_no", nullable = true)
+    private String cardNo;
 
-    @Column(name = "flag")
-    private Integer flag;
+    @Column(name = "nama", nullable = true)
+    private String nama;
+
+    @Column(name = "phone", nullable = true)
+    private String phone;
 }

@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bit_proj_library_1_0_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/org/bit/proj-library/1.0-SNAPSHOT/proj-library-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/org/bit/proj-library/1.0-SNAPSHOT/proj-library-1.0-SNAPSHOT.pom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/BcaDbConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/BosDbConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/register-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/NasabahDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bcaent/NasabahDim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/OTPDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bosent/OTPDim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/SellerDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bosent/SellerDim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/NasabahRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bcadb/NasabahRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/OTPRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bosdb/OTPRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/SellerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bosdb/SellerRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,7 +51,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../projectAPI/demo" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -96,26 +102,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="192" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582779021375" />
-    <state x="346" y="81" key="FileChooserDialogImpl" timestamp="1582773450087">
+    <state x="346" y="81" key="FileChooserDialogImpl" timestamp="1583135628333">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="346" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582773450087" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1582785987985">
+    <state x="346" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1583135628333" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1582788768302">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582785987985" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1582785987985">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582788768302" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1582788768301">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582785987985" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1582785987985">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582788768301" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1582788768301">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582785987985" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1582785987985">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582788768301" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1582788768301">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582785987985" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582788768301" />
     <state x="120" y="0" key="SettingsEditor" timestamp="1582773461503">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -124,6 +130,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1582773407515" />
+    <state x="284" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583121507472">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="284" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680@0.0.1280.680" timestamp="1583121507472" />
     <state x="48" y="292" width="1096" height="496" key="dock-window-1" timestamp="1582529189987">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -132,6 +142,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="92" y="92" width="1096" height="496" key="dock-window-2/0.0.1280.680@0.0.1280.680" timestamp="1582529502595" />
+    <state x="296" y="150" key="run.anything.popup" timestamp="1583133690946">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1583133690946" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1582601814372">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
