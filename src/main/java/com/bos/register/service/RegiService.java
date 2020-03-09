@@ -3,14 +3,14 @@ package com.bos.register.service;
 import bca.bit.proj.library.base.ResultEntity;
 import bca.bit.proj.library.enums.ErrorCode;
 import com.bos.register.dto.RegisterField;
-import com.bos.register.entity.bcaent.NasabahDim;
-import com.bos.register.entity.bosent.OTPDim;
-import com.bos.register.entity.bosent.SellerDim;
+import com.bos.register.entity.NasabahDim;
+import com.bos.register.entity.OTPDim;
+import com.bos.register.entity.SellerDim;
 import com.bos.register.entity.testCLK;
-import com.bos.register.repository.bcadb.NasabahRepo;
-import com.bos.register.repository.bosdb.OTPRepo;
-import com.bos.register.repository.bosdb.SellerRepo;
-import com.bos.register.repository.testCLKRepo;
+import com.bos.register.repository.bca.NasabahRepo;
+import com.bos.register.repository.bos.OTPRepo;
+import com.bos.register.repository.bos.SellerRepo;
+import com.bos.register.repository.bos.testCLKRepo;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -51,7 +51,7 @@ public class RegiService {
         return Integer.parseInt(tmp_randomNumber.toString());
     }
 
-    private void sendOTP(String p_username, String p_phoneNumber){
+    private boolean sendOTP(String p_username, String p_phoneNumber){
         String l_message;
         String l_otpCode = "0";
         boolean l_checkUniqueOTP = false;
@@ -62,7 +62,7 @@ public class RegiService {
 
             if (otpRepo.findById(l_otpCode).equals(Optional.empty())){
                 OTPDim otp = new OTPDim();
-                otp.setId(l_otpCode);
+                otp.setOtpCode(l_otpCode);
                 otp.setUsername(p_username);
                 otp.setFlag(0);
                 otpRepo.save(otp);
@@ -75,9 +75,12 @@ public class RegiService {
         initMessageSender();
 
         try{
+            System.out.println("Trying to send OTP");
             Message.creator(new PhoneNumber(p_phoneNumber), new PhoneNumber("+18175063556"), l_message).create();
+            return true;
         }catch (Exception e){
             System.out.println(e.toString());
+            return false;
         }
     }
 
@@ -86,49 +89,119 @@ public class RegiService {
 
         if(nasdim != null){
             System.out.println("Data is not NULL");
-            return new ResultEntity<>(nasdim,ErrorCode.B000);
+            return new ResultEntity<>(nasdim, ErrorCode.BIT_000);
         }
         else {
             System.out.println("Data is NULL");
-            return new ResultEntity<>(null,ErrorCode.B999);
+            return new ResultEntity<>(null, ErrorCode.BIT_999);
         }
     }
 
-    public ResultEntity<List<NasabahDim>> getAllNasabah(){
-        List<NasabahDim> data = nasRepo.findAll();
+    private boolean isNasabah(String cardNo){
+        if(nasRepo.findCardNo(cardNo) == null){
+            System.out.println("Not registered at BCA");
+            return false;
+        }else{
+            System.out.println("Registered at BCA");
+            return true;
+        }
+    }
 
-        if (data.size() > 0){
-            return new ResultEntity<>(data, ErrorCode.B000);
+    private boolean isSeller(String cardNo){
+        if(sellRepo.findCardNum(cardNo) == null){
+            System.out.println("Not registered as Seller");
+            return false;
         }
         else {
-            return new ResultEntity<>(data, ErrorCode.B999);
+            System.out.println("Registered as Seller");
+            return true;
         }
     }
 
-    public ResultEntity<List<testCLK>> getAlltest(){
-        List<testCLK> data = test.findAll();
 
-        if (data.size() > 0){
-            return new ResultEntity<>(data, ErrorCode.B000);
-        }
-        else {
-            return new ResultEntity<>(data, ErrorCode.B999);
-        }
-    }
 
     public ResultEntity sendOTP(RegisterField registerField){
+        System.out.println("card no inserted: " + registerField.getCard_no());
         String msg;
-        boolean l_sendOTPFlag;
+        String cardNo = registerField.getCard_no();
         String l_phoneNumber;
+        boolean otpStatus;
 
+        if(isSeller(cardNo) && (sellRepo.getFlagByCardNo(cardNo) < 3)){
+            // Check flag & jumlah otp yg terkirim
+            Integer countOTPByUsername = otpRepo.getCountByUsername(registerField.getUsername());
+            if (countOTPByUsername < 3){
+                if(countOTPByUsername != 0){
+                    otpRepo.updateFlag(1, registerField.getUsername());
+                }
+
+                //Send OTP
+                l_phoneNumber = nasRepo.getPhoneByCardNo(registerField.getCard_no());
+                otpStatus = sendOTP(registerField.getUsername(), l_phoneNumber);
+                if(otpStatus){
+                    return new ResultEntity("Berhasil mengirim OTP", ErrorCode.BIT_000);
+                }
+                else return new ResultEntity("Gagal mengirim OTP", ErrorCode.BIT_999);
+            }
+            else{
+                msg = "OTP dgn username " + registerField.getUsername() + ", sudah generate 3x";
+                return new ResultEntity(msg,ErrorCode.BIT_999);
+            }
+        }
+        else if(isSeller(cardNo) && (sellRepo.getFlagByCardNo(cardNo) == 4)){
+            msg = "Nasabah dengan no kartu ATM: " + registerField.getCard_no() + " sudah terverifikasi sebagai seller";
+            return new ResultEntity(msg, ErrorCode.BIT_000);
+        }
+        else{
+            if(isNasabah(cardNo)){
+                try{
+                    //Get nasabah from db by kartuID
+                    NasabahDim tmp_nasabah = nasRepo.getNasabahByCardNo(registerField.getCard_no());
+                    System.out.println("masuk ke temp");
+
+                    //Save data to db (table seller)
+                    SellerDim tmp_seller = new SellerDim();
+                    tmp_seller.setCardNum(tmp_nasabah.getAtmCardNo());
+                    tmp_seller.setName(tmp_nasabah.getAcctName());
+                    tmp_seller.setPhone(tmp_nasabah.getMobileNum());
+                    tmp_seller.setUsername(registerField.getUsername());
+                    tmp_seller.setPassword(registerField.getPassword());
+                    tmp_seller.setAccountNo(tmp_nasabah.getAcctCardNo());
+                    tmp_seller.setFlag(0);
+                    sellRepo.save(tmp_seller);
+
+                    //Send OTP
+                    l_phoneNumber = nasRepo.getPhoneByCardNo(registerField.getCard_no());
+                    otpStatus = sendOTP(registerField.getUsername(), l_phoneNumber);
+                    if(otpStatus){
+                        return new ResultEntity("Berhasil mengirim OTP", ErrorCode.BIT_000);
+                    }
+                    else return new ResultEntity("Gagal mengirim OTP", ErrorCode.BIT_999);
+                }catch (Exception e){
+                    e.printStackTrace();
+                    msg = "System under maintenance";
+                    return new ResultEntity(msg, ErrorCode.BIT_999);
+                }
+            }
+            else{
+                return new ResultEntity<>("Not registered at BCA", ErrorCode.BIT_999);
+            }
+        }
+
+        /*
         //Cek nasabah harus terdaftar di db
         if (registerField.getCard_no().equals(nasRepo.findCardNo(registerField.getCard_no()))){
+            System.out.println("Nasabah registered");
+
             //Get phone number dari BCA db
             l_phoneNumber = nasRepo.getPhoneByCardNo(registerField.getCard_no());
+            System.out.println("phone: " + l_phoneNumber);
 
             //Check nasabah if exist as seller
-            if (registerField.getCard_no().equals(nasRepo.findCardNo(registerField.getCard_no())) &&
+            if (registerField.getCard_no().equals(
+                    sellRepo.getFlagByCardNo(registerField.getCard_no())) &&
                     sellRepo.getFlagByCardNo(registerField.getCard_no()) < 3){
+                System.out.println("exist as seller");
 
                 //Check OTP sudah ter-generate berapa kali (maks 3) berdasarkan username?
                 if (otpRepo.getCountByUsername(registerField.getUsername()) == 0){
@@ -139,26 +212,29 @@ public class RegiService {
                     l_sendOTPFlag = true;
 
                 }else{
+                    l_sendOTPFlag = false;
                     msg = "OTP dgn username " + registerField.getUsername() + ", sudah generate 3x";
-                    return new ResultEntity(msg,ErrorCode.B999);
+                    return new ResultEntity(msg,ErrorCode.BIT_999);
                 }
 
                 //Check nasabah sudah terdaftar as seller?
-            }else if (registerField.getCard_no().equals(sellRepo.findCardNo(registerField.getCard_no())) &&
+            }else if (registerField.getCard_no().equals(sellRepo.findCardNum(registerField.getCard_no())) &&
                     sellRepo.getFlagByCardNo(registerField.getCard_no()) == 4) {
                 msg = "Nasabah dengan no kartu ATM: " + registerField.getCard_no() + " sudah terdaftar sebagai seller";
-                return new ResultEntity(msg, ErrorCode.B000);
+                return new ResultEntity(msg, ErrorCode.BIT_000);
 
             }else {
+
                 try{
                     //Get nasabah from db by kartuID
                     NasabahDim tmp_nasabah = nasRepo.getNasabahByCardNo(registerField.getCard_no());
+                    System.out.println("masuk ke temp");
 
                     //Save data to db (table seller)
                     SellerDim tmp_seller = new SellerDim();
-                    tmp_seller.setCardNo(tmp_nasabah.getCardNo());
-                    tmp_seller.setNama(tmp_nasabah.getNama());
-                    tmp_seller.setPhone(tmp_nasabah.getPhone());
+                    tmp_seller.setCardNum(tmp_nasabah.getAtmCardNo());
+                    tmp_seller.setName(tmp_nasabah.getAcctName());
+                    tmp_seller.setPhone(tmp_nasabah.getMobileNum());
                     tmp_seller.setUsername(registerField.getUsername());
                     tmp_seller.setPassword(registerField.getPassword());
                     tmp_seller.setFlag(0);
@@ -167,25 +243,50 @@ public class RegiService {
                     l_sendOTPFlag = true;
 
                 }catch (Exception e){
-                    msg = "Username sudah digunakan";
-                    return new ResultEntity(msg, ErrorCode.B999);
+                    e.printStackTrace();
+                    msg = "System under maintenance";
+                    return new ResultEntity(msg, ErrorCode.BIT_999);
                 }
             }
 
         }else{
             msg = "No Kartu ATM tidak terdaftar";
-            return new ResultEntity(msg,ErrorCode.B999);
+            return new ResultEntity(msg, ErrorCode.BIT_999);
         }
 
-        //Send OTP
-        if (l_sendOTPFlag){
-            sendOTP(registerField.getUsername(), l_phoneNumber);
-            msg = "Berhasil send OTP";
-            return new ResultEntity(msg, ErrorCode.B000);
+         */
+    }
 
-        }else{
-            msg = "Tidak berhasil send OTP";
-            return new ResultEntity<>(msg, ErrorCode.B999);
+    public ResultEntity<List<NasabahDim>> getAllNasabah(){
+        List<NasabahDim> data = nasRepo.findAll();
+
+        if (data.size() > 0){
+            return new ResultEntity<>(data, ErrorCode.BIT_000);
+        }
+        else {
+            return new ResultEntity<>(data, ErrorCode.BIT_999);
+        }
+    }
+
+    public ResultEntity<List<testCLK>> getAlltest(){
+        List<testCLK> data = test.findAll();
+
+        if (data.size() > 0){
+            return new ResultEntity<>(data, ErrorCode.BIT_000);
+        }
+        else {
+            return new ResultEntity<>(data, ErrorCode.BIT_999);
+        }
+    }
+
+    public ResultEntity<List<SellerDim>> getAllSeller(){
+        List<SellerDim> data = sellRepo.findAll();
+
+        if (data.size() > 0){
+            return new ResultEntity<>(data, ErrorCode.BIT_000);
+        }
+        else {
+            return new ResultEntity<>(data, ErrorCode.BIT_999);
         }
     }
 }
