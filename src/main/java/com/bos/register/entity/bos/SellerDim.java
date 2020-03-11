@@ -1,4 +1,4 @@
-package com.bos.register.entity;
+package com.bos.register.entity.bos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;

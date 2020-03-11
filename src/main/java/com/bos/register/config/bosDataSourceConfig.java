@@ -1,9 +1,5 @@
 package com.bos.register.config;
 
-import com.bos.register.entity.OTPDim;
-import com.bos.register.entity.SellerDim;
-import com.bos.register.entity.testCLK;
-import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -17,6 +13,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
@@ -25,7 +22,33 @@ import javax.sql.DataSource;
         entityManagerFactoryRef = "bosEntityManagerFactory",
         transactionManagerRef = "bosTransactionManager")
 public class bosDataSourceConfig {
+    @Primary
+    @Bean
+    @ConfigurationProperties(prefix = "bos.datasource")
+    public DataSourceProperties bosDataSourceProperties() {
+        return new DataSourceProperties();
+    }
 
+    @Primary
+    @Bean
+    public DataSource bosDataSource(@Qualifier("bosDataSourceProperties") DataSourceProperties dataSourceProperties) {
+        return dataSourceProperties.initializeDataSourceBuilder().build();
+    }
+
+    @Primary
+    @Bean
+    public LocalContainerEntityManagerFactoryBean bosEntityManagerFactory(@Qualifier("bosDataSource") DataSource hubDataSource, EntityManagerFactoryBuilder builder) {
+        return builder.dataSource(hubDataSource).packages("com.bos.register.entity.bos")
+                .persistenceUnit("bos").build();
+    }
+
+    @Primary
+    @Bean
+    public PlatformTransactionManager bosTransactionManager(@Qualifier("bosEntityManagerFactory") EntityManagerFactory factory) {
+        return new JpaTransactionManager(factory);
+    }
+
+    /*
     @Bean
     @Primary
     @ConfigurationProperties("bos.datasource")
@@ -58,4 +81,5 @@ public class bosDataSourceConfig {
             final @Qualifier("bosEntityManagerFactory") LocalContainerEntityManagerFactoryBean bosEntityManagerFactory){
         return new JpaTransactionManager(bosEntityManagerFactory.getObject());
     }
+     */
 }

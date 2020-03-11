@@ -1,6 +1,6 @@
 package com.bos.register.repository.bos;
 
-import com.bos.register.entity.testCLK;
+import com.bos.register.entity.bos.testCLK;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

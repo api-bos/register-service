@@ -1,4 +1,4 @@
-package com.bos.register.entity;
+package com.bos.register.entity.bca;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
@@ -13,7 +13,8 @@ import javax.persistence.Table;
 @Entity
 @Builder
 //@Table(name = "nasabah_dummy", schema = "public")
-@Table(name = "account_curr_dimension_dummy", schema = "public")
+//@Table(name = "account_curr_dimension_dummy", schema = "public")
+@Table(name = "bit9_acct_curr_dim_dummy", schema = "bit")
 @Getter
 @Setter
 @AllArgsConstructor

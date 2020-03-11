@@ -1,4 +1,4 @@
-package com.bos.register.entity;
+package com.bos.register.entity.bos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
@@ -9,24 +9,34 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Builder
-@Table(name = "otp", schema = "public")
+@Table(name = "test_clk", schema = "public")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class OTPDim {
+public class testCLK {
     @Id
-    @Column(name = "otp_code")
-    private String otpCode;
+    @Column(name = "user_id")
+    private Integer userId;
 
     @Column(name = "username")
     private String username;
 
-    @Column(name = "flag")
-    private Integer flag;
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "created_on")
+    private Date createdOn;
+
+    @Column(name = "last_login")
+    private Date lastLogin;
 }
