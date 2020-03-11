@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/testCLK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/testCLKRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
