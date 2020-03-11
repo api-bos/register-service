@@ -4,7 +4,6 @@ import bca.bit.proj.library.base.ResultEntity;
 import com.bos.register.dto.RegisterField;
 import com.bos.register.entity.bca.NasabahDim;
 import com.bos.register.entity.bos.SellerDim;
-import com.bos.register.entity.bos.testCLK;
 import com.bos.register.service.RegiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -30,12 +29,6 @@ public class ResController {
         System.out.println("Trying Request");
 
         return service.getNasabahByCardNo(cardNo);
-    }
-
-    @GetMapping(value = "/test", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResultEntity<List<testCLK>> getTest(){
-        System.out.println("TESSSTTTTT");
-        return service.getAlltest();
     }
 
     @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)

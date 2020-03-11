@@ -6,11 +6,9 @@ import com.bos.register.dto.RegisterField;
 import com.bos.register.entity.bca.NasabahDim;
 import com.bos.register.entity.bos.OTPDim;
 import com.bos.register.entity.bos.SellerDim;
-import com.bos.register.entity.bos.testCLK;
 import com.bos.register.repository.bca.NasabahRepo;
 import com.bos.register.repository.bos.OTPRepo;
 import com.bos.register.repository.bos.SellerRepo;
-import com.bos.register.repository.bos.testCLKRepo;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -29,9 +27,6 @@ public class RegiService {
     OTPRepo otpRepo;
     @Autowired
     SellerRepo sellRepo;
-
-    @Autowired
-    testCLKRepo test;
 
     private void initMessageSender(){
         String l_ACCOUNT_SID = "AC17cb2fb0f7fd9bfe9b4b619d19b79031";
@@ -259,17 +254,6 @@ public class RegiService {
 
     public ResultEntity<List<NasabahDim>> getAllNasabah(){
         List<NasabahDim> data = nasRepo.findAll();
-
-        if (data.size() > 0){
-            return new ResultEntity<>(data, ErrorCode.BIT_000);
-        }
-        else {
-            return new ResultEntity<>(data, ErrorCode.BIT_999);
-        }
-    }
-
-    public ResultEntity<List<testCLK>> getAlltest(){
-        List<testCLK> data = test.findAll();
 
         if (data.size() > 0){
             return new ResultEntity<>(data, ErrorCode.BIT_000);

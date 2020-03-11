@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_ojdbc6_11_2_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/register-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/bcaDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/bcaDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/bosDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/bosDataSourceConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/NasabahDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bca/NasabahDim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/OTPDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/OTPDim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/SellerDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/SellerDim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/testCLK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/testCLK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bca/NasabahRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bca/NasabahRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/OTPRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/OTPRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/SellerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/SellerRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/testCLKRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/testCLKRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/testCLK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/testCLKRepo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +94,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="391" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1582516048339" />
+    <state x="370" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583898160694">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="370" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1583898160694" />
     <state x="192" y="0" key="CommitChangelistDialog2" timestamp="1583220503340">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
