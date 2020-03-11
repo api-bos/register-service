@@ -30,7 +30,7 @@ public class RegiService {
 
     private void initMessageSender(){
         String l_ACCOUNT_SID = "AC17cb2fb0f7fd9bfe9b4b619d19b79031";
-        String l_AUTH_TOKEN = "d2236be02b13d3fb5ad1b5f7bcfa148f";
+        String l_AUTH_TOKEN = "b4d31701293c4082691728f40ae616f8";
         Twilio.init(l_ACCOUNT_SID, l_AUTH_TOKEN);
         System.out.println("Done init twilio");
     }
