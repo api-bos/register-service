@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="" />
+    <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/RegisterServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/RegisterServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/RegisterServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/RegisterServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/register-service-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/register-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.bos.register.RegisterServiceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.bos.register.RegisterServiceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.bos.register.RegisterServiceApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.bos.register.RegisterServiceApplicationTests.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,22 +114,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="346" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1583724159478" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1583898225993">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1584334178210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583898225993" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1583898225993">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584334178210" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1584334178209">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583898225993" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1583898225993">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584334178209" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1584334178209">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583898225993" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1583898225993">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584334178209" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1584334178210">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583898225993" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584334178210" />
     <state x="120" y="0" key="SettingsEditor" timestamp="1582773461503">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
