@@ -13,8 +13,12 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -27,6 +31,25 @@ public class RegiService {
     OTPRepo otpRepo;
     @Autowired
     SellerRepo sellRepo;
+
+    public RestTemplate getProxyRestTemplate(){
+        System.out.println("Coba Proxy");
+        String proxyServerIpAddr = "10.1.10.47";
+        int proxyServerPort = Integer.parseInt("8080");
+        SimpleClientHttpRequestFactory httpRequestFactory = new SimpleClientHttpRequestFactory();
+        String connectTO = "5000";
+        String readTO = "5000";
+
+        Proxy proxy = new Proxy(java.net.Proxy.Type.HTTP, new InetSocketAddress(proxyServerIpAddr, proxyServerPort));
+
+        System.out.println("Connect TO : " + connectTO);
+        System.out.println("Read TO : " + readTO);
+
+        httpRequestFactory.setConnectTimeout(Integer.parseInt(connectTO));
+        httpRequestFactory.setReadTimeout(Integer.parseInt(readTO));
+        httpRequestFactory.setProxy(proxy);
+        return new RestTemplate(httpRequestFactory);
+    }
 
     private void initMessageSender(){
         String l_ACCOUNT_SID = "AC17cb2fb0f7fd9bfe9b4b619d19b79031";
