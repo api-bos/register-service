@@ -44,7 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../login-service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -107,22 +107,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="346" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1584341548932" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1584347938345">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1584412130327">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584347938345" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1584347938344">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584412130327" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1584412130327">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584347938344" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1584347938344">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584412130327" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1584412130327">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584347938344" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1584347938344">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584412130327" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1584412130327">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584347938344" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584412130327" />
     <state x="120" y="0" key="SettingsEditor" timestamp="1582773461503">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
