@@ -2,6 +2,8 @@ package com.bos.register.service;
 
 import bca.bit.proj.library.base.ResultEntity;
 import bca.bit.proj.library.enums.ErrorCode;
+import com.bos.register.config.twillio.CustomNetworkClient;
+import com.bos.register.config.twillio.TwilioUtil;
 import com.bos.register.dto.RegisterField;
 import com.bos.register.entity.bca.NasabahDim;
 import com.bos.register.entity.bos.OTPDim;
@@ -10,15 +12,12 @@ import com.bos.register.repository.bca.NasabahRepo;
 import com.bos.register.repository.bos.OTPRepo;
 import com.bos.register.repository.bos.SellerRepo;
 import com.twilio.Twilio;
+import com.twilio.http.TwilioRestClient;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import java.net.InetSocketAddress;
-import java.net.Proxy;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -32,6 +31,7 @@ public class RegiService {
     @Autowired
     SellerRepo sellRepo;
 
+    /*
     public RestTemplate getProxyRestTemplate(){
         System.out.println("Coba Proxy");
         String proxyServerIpAddr = "10.1.10.47";
@@ -51,10 +51,17 @@ public class RegiService {
         return new RestTemplate(httpRequestFactory);
     }
 
-    private void initMessageSender(){
-        String l_ACCOUNT_SID = "AC17cb2fb0f7fd9bfe9b4b619d19b79031";
-        String l_AUTH_TOKEN = "525d483f54d94f48cd0dfad44e918740";
-        Twilio.init(l_ACCOUNT_SID, l_AUTH_TOKEN);
+     */
+
+    private void initMessageSender() throws Exception {
+        CustomNetworkClient newHttpClient = new CustomNetworkClient();
+        Twilio.init(TwilioUtil.ACCOUNT_SID, TwilioUtil.AUTH_TOKEN);
+        TwilioRestClient client = new TwilioRestClient
+                .Builder(TwilioUtil.ACCOUNT_SID, TwilioUtil.AUTH_TOKEN)
+                .httpClient(newHttpClient)
+                .build();
+        Twilio.setRestClient(client);
+
         System.out.println("Done init twilio");
     }
 
@@ -69,7 +76,7 @@ public class RegiService {
         return Integer.parseInt(tmp_randomNumber.toString());
     }
 
-    private boolean sendOTP(String p_username, String p_phoneNumber){
+    private boolean sendOTP(String p_username, String p_phoneNumber) throws Exception {
         String l_message;
         String l_otpCode = "0";
         boolean l_checkUniqueOTP = false;
@@ -94,6 +101,7 @@ public class RegiService {
 
         try{
             System.out.println("Trying to send OTP");
+
             Message.creator(new PhoneNumber(p_phoneNumber), new PhoneNumber("+18175063556"), l_message).create();
             return true;
         }catch (Exception e){
@@ -138,7 +146,7 @@ public class RegiService {
 
 
 
-    public ResultEntity sendOTP(RegisterField registerField){
+    public ResultEntity sendOTP(RegisterField registerField) throws Exception {
         System.out.println("card no inserted: " + registerField.getCard_no());
         String msg;
         String cardNo = registerField.getCard_no();

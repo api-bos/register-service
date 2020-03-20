@@ -1,10 +1,12 @@
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\repository\bca\NasabahRepo.java
+C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\config\twillio\TwilioUtil.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\service\RegiService.java
-C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\config\bcaDataSourceConfig.java
+C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\config\twillio\CustomNetworkClient.java
+C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\config\database\bcaDataSourceConfig.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\controller\ResController.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\entity\bos\OTPDim.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\entity\bos\SellerDim.java
-C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\config\bosDataSourceConfig.java
+C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\config\database\bosDataSourceConfig.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\repository\bos\SellerRepo.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\entity\bca\NasabahDim.java
 C:\Users\u067728\Documents\BIT\Service\github-api-bos\services\register-service\src\main\java\com\bos\register\dto\RegisterVerified.java

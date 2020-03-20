@@ -1,11 +1,11 @@
 com\bos\register\repository\bos\OTPRepo.class
 com\bos\register\entity\bos\OTPDim$OTPDimBuilder.class
-com\bos\register\config\bcaDataSourceConfig.class
+com\bos\register\config\database\bcaDataSourceConfig.class
 com\bos\register\dto\RegisterVerified.class
-com\bos\register\config\bosDataSourceConfig.class
 com\bos\register\dto\RegisterField.class
 com\bos\register\entity\bca\NasabahDim$NasabahDimBuilder.class
 com\bos\register\entity\bos\SellerDim$SellerDimBuilder.class
+com\bos\register\config\twillio\TwilioUtil.class
 com\bos\register\repository\bos\SellerRepo.class
 com\bos\register\entity\bos\OTPDim.class
 com\bos\register\service\RegiService.class
@@ -14,3 +14,5 @@ com\bos\register\repository\bca\NasabahRepo.class
 com\bos\register\controller\ResController.class
 com\bos\register\entity\bca\NasabahDim.class
 com\bos\register\entity\bos\SellerDim.class
+com\bos\register\config\database\bosDataSourceConfig.class
+com\bos\register\config\twillio\CustomNetworkClient.class

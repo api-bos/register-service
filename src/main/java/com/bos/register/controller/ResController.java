@@ -18,7 +18,7 @@ public class ResController {
     RegiService service;
 
     @PostMapping("/sOTP")
-    public ResultEntity sendOTP(@RequestBody RegisterField registerField){
+    public ResultEntity sendOTP(@RequestBody RegisterField registerField) throws Exception {
         System.out.println("Trying Send OTP Service");
         return service.sendOTP(registerField);
     }
