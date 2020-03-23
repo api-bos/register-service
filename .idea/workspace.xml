@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/TwilioUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/register-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/bcaDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/database/bcaDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/bosDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/database/bosDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/TwilioUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/TwilioUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/RegisterServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/RegisterServiceApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/bcaDataSourceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/bosDataSourceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/controller/ResController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/controller/ResController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/TwilioUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/TwilioUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,22 +118,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="346" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1584341548932" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1584676201596">
+    <state width="1237" height="171" key="GridCell.Tab.0.bottom" timestamp="1584705682212">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584676201596" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1584676201596">
+    <state width="1237" height="171" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.0.center" timestamp="1584705682212">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584676201596" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1584676201595">
+    <state width="1237" height="171" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.0.left" timestamp="1584705682212">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584676201595" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1584676201596">
+    <state width="1237" height="171" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.0.right" timestamp="1584705682212">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584676201596" />
+    <state width="1237" height="171" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.1.bottom" timestamp="1584705682212">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="171" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.1.center" timestamp="1584705682212">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="171" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.1.left" timestamp="1584705682212">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="171" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
+    <state width="1237" height="171" key="GridCell.Tab.1.right" timestamp="1584705682212">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="171" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
     <state x="120" y="0" key="SettingsEditor" timestamp="1582773461503">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -177,5 +186,42 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583896558919" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="response.getEntity().getContent()" language="JAVA" />
+        <watch expression="response.getStatusLine().getStatusCode()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

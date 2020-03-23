@@ -105,7 +105,7 @@ public class RegiService {
             Message.creator(new PhoneNumber(p_phoneNumber), new PhoneNumber("+18175063556"), l_message).create();
             return true;
         }catch (Exception e){
-            System.out.println(e.toString());
+            e.printStackTrace();
             return false;
         }
     }

@@ -66,16 +66,16 @@ public class CustomNetworkClient extends HttpClient {
                 .setCharset(StandardCharsets.UTF_8);
 
         if (request.requiresAuthentication()) {
-            builder.addHeader(HttpHeaders.AUTHORIZATION, request.getAuthString());
+            builder = builder.addHeader(HttpHeaders.AUTHORIZATION, request.getAuthString());
         }
 
         HttpMethod method = request.getMethod();
         if (method == HttpMethod.POST) {
-            builder.addHeader(HttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
+            builder = builder.addHeader(HttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
             for (Map.Entry<String, List<String>> entry : request.getPostParams().entrySet()) {
                 for (String value : entry.getValue()) {
-                    builder.addParameter(entry.getKey(), value);
+                    builder = builder.addParameter(entry.getKey(), value);
                 }
             }
         }
@@ -108,7 +108,8 @@ public class CustomNetworkClient extends HttpClient {
 
 
     public  void invokeHttpProxy() {
-        HttpHost proxy = new HttpHost("10.17.10.42", 8080, "http");
+//        HttpHost proxy = new HttpHost("10.17.10.42", 8080, "http");
+        HttpHost proxy = new HttpHost("kpproxygsit", 8080, "http");
         DefaultProxyRoutePlanner routePlanner = new DefaultProxyRoutePlanner(proxy);
 
         //Set up Twilio user credentials
