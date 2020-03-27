@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/register-service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/TwilioUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/TwilioUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/TwilioUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/TwilioUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,8 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -50,7 +49,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -98,6 +97,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="445" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1584599036607" />
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585284566521">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585284566521" />
+    <state x="540" y="175" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1585284564330">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="175" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585284564330" />
     <state x="320" y="68" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583222995878">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -150,10 +157,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="171" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1584705682212" />
-    <state x="120" y="0" key="SettingsEditor" timestamp="1582773461503">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="180" y="0" key="SettingsEditor" timestamp="1585284599657">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="120" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1582773461503" />
+    <state x="180" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585284599657" />
     <state x="232" y="73" key="Vcs.Push.Dialog.v2" timestamp="1582773407515">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
