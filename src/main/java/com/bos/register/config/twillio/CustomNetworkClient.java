@@ -108,8 +108,8 @@ public class CustomNetworkClient extends HttpClient {
 
 
     public  void invokeHttpProxy() {
-//        HttpHost proxy = new HttpHost("10.17.10.42", 8080, "http");
-        HttpHost proxy = new HttpHost("kpproxygsit", 8080, "http");
+        HttpHost proxy = new HttpHost("10.17.10.42", 8080, "http");
+//        HttpHost proxy = new HttpHost("kpproxygsit", 8080, "http");
         DefaultProxyRoutePlanner routePlanner = new DefaultProxyRoutePlanner(proxy);
 
         //Set up Twilio user credentials
