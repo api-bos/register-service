@@ -17,6 +17,7 @@ import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -154,7 +155,7 @@ public class RegisterService {
         String nama = registerField.getNama();
         String acctNo = registerField.getNoRek();
         String phone = registerField.getNoHp();
-        String pw = registerField.getPassword();
+        String pw = new BCryptPasswordEncoder().encode(registerField.getPassword());
 
         Integer isSeller = isSeller(username,acctNo,phone);
         Integer isNasabah = isNasabah(acctNo,phone);
