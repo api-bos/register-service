@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/Verif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/database/bcaDataSourceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/database/bosDataSourceConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterVerified.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterVerif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bca/NasabahDim.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/OTPDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/OTPDim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/SellerDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/SellerDim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bca/NasabahRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/OTPRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/OTPRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/SellerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/SellerRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/database/bcaDataSourceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/database/bosDataSourceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/controller/ResController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/controller/ResController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/dto/RegisterField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/dto/RegisterField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/dto/RegisterVerified.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bca/NasabahDim$NasabahDimBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bca/NasabahDim.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/OTPDim$OTPDimBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/OTPDim.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/SellerDim$SellerDimBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/SellerDim.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/repository/bca/NasabahRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/repository/bos/OTPRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/repository/bos/SellerRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegisterService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -146,7 +146,7 @@ public class RegisterService {
         return Integer.valueOf(result);
     }
 
-    public ResultEntity sendOTP(RegisterField registerField) {
+    public ResultEntity<String> sendOTP(RegisterField registerField) {
         System.out.println("rek no inserted: " + registerField.getNoRek());
         boolean otpStatus;
 
@@ -162,21 +162,21 @@ public class RegisterService {
         System.out.println("isNasabah: "+isNasabah);
 
         if(isSeller == 1)
-            return new ResultEntity("Username telah digunakan",ErrorCode.BIT_999);
+            return new ResultEntity<>("Username telah digunakan", ErrorCode.BIT_999);
         else if(isSeller == 2)
-            return new ResultEntity("Account_no telah digunakan",ErrorCode.BIT_999);
+            return new ResultEntity<>("Account_no telah digunakan",ErrorCode.BIT_999);
         else if(isSeller == 3)
-            return new ResultEntity("No_hp telah digunakan",ErrorCode.BIT_999);
+            return new ResultEntity<>("No_hp telah digunakan",ErrorCode.BIT_999);
         else if(isNasabah != 0){
             if(isNasabah == 1)
-                return new ResultEntity("BCA -- INVALID MOBILE NUMBER",ErrorCode.BIT_999);
+                return new ResultEntity<>("BCA -- INVALID MOBILE NUMBER",ErrorCode.BIT_999);
             else if(isNasabah == 2)
-                return new ResultEntity("BCA -- INVALID ACCOUNT NO",ErrorCode.BIT_999);
-            else return new ResultEntity("SYSTEM UNDER MAINTENANCE",ErrorCode.BIT_999);
+                return new ResultEntity<>("BCA -- INVALID ACCOUNT NO",ErrorCode.BIT_999);
+            else return new ResultEntity<>("SYSTEM UNDER MAINTENANCE",ErrorCode.BIT_999);
         }
         else if(username == null || nama == null || acctNo == null || phone == null || pw == null){
             System.out.println("\nNULL FIELD");
-            return new ResultEntity("Field tidak boleh kosong",ErrorCode.BIT_999);
+            return new ResultEntity<>("Field tidak boleh kosong",ErrorCode.BIT_999);
         }
         else{
             SellerDim tmp_seller = new SellerDim();
@@ -191,22 +191,22 @@ public class RegisterService {
             //Send OTP
             otpStatus = sendOTP(username, phone);
             if(otpStatus){
-                return new ResultEntity("Berhasil mengirim OTP", ErrorCode.BIT_000);
+                return new ResultEntity<>("Berhasil mengirim OTP", ErrorCode.BIT_000);
             }
-            else return new ResultEntity("Gagal mengirim OTP", ErrorCode.BIT_999);
+            else return new ResultEntity<>("Gagal mengirim OTP", ErrorCode.BIT_999);
         }
     }
 
-    public ResultEntity resendOTP(String noHp){
+    public ResultEntity<String> resendOTP(String noHp){
         boolean otpStatus;
         String idBos = sellRepo.findUsernamebyPhone(noHp);
         Integer flagSeller = sellRepo.getFlagByUsername(idBos);
         System.out.println("username: "+idBos);
         System.out.println("flag: "+flagSeller);
 
-        if(idBos == null) return new ResultEntity("Invalid no_hp", ErrorCode.BIT_999);
-        if(flagSeller == 4) return new ResultEntity("User telah terverifikasi", ErrorCode.BIT_999);
-        if(flagSeller == 3) return new ResultEntity("User terblockir selama 1 hari", ErrorCode.BIT_999);
+        if(idBos == null) return new ResultEntity<>("Invalid no_hp", ErrorCode.BIT_999);
+        if(flagSeller == 4) return new ResultEntity<>("User telah terverifikasi", ErrorCode.BIT_999);
+        if(flagSeller == 3) return new ResultEntity<>("User terblockir selama 1 hari", ErrorCode.BIT_999);
 
         // Check flag & jumlah otp yg terkirim
         Integer countOTPByUsername = otpRepo.getCountByUsername(idBos);
@@ -218,17 +218,17 @@ public class RegisterService {
             //Send OTP
             otpStatus = sendOTP(idBos, noHp);
             if(otpStatus){
-                return new ResultEntity("Berhasil mengirim OTP", ErrorCode.BIT_000);
+                return new ResultEntity<>("Berhasil mengirim OTP", ErrorCode.BIT_000);
             }
-            else return new ResultEntity("Gagal mengirim OTP", ErrorCode.BIT_999);
+            else return new ResultEntity<>("Gagal mengirim OTP", ErrorCode.BIT_999);
         }
         else{
             String msg = "OTP dgn username " + idBos + ", sudah generate 3x";
-            return new ResultEntity(msg,ErrorCode.BIT_999);
+            return new ResultEntity<>(msg,ErrorCode.BIT_999);
         }
     }
 
-    public ResultEntity verifOTP(RegisterVerif registerVerif){
+    public ResultEntity<String> verifOTP(RegisterVerif registerVerif){
         Integer otp = registerVerif.getOtp();
         String username = registerVerif.getBosId();
         System.out.println("otp: "+otp);
@@ -236,7 +236,7 @@ public class RegisterService {
 
         Integer votp = otpRepo.findOTPByUsername(username,0);
         System.out.println("vOTP: "+votp);
-        if(votp == null) return new ResultEntity("Invalid bos_id", ErrorCode.BIT_999);
+        if(votp == null) return new ResultEntity<>("Invalid bos_id", ErrorCode.BIT_999);
 
         if(votp.equals(otp)){
             //Update flag OTP disable
@@ -245,7 +245,7 @@ public class RegisterService {
             sellRepo.updateFlagByUsername(4, username);
 
             Integer idSeller = sellRepo.findIdSellerbyUsername(username);
-            return new ResultEntity("Successfully verified \nid_seller: "+idSeller, ErrorCode.BIT_000);
+            return new ResultEntity<>("id_seller: "+idSeller, ErrorCode.BIT_000);
         }
         else {
             Integer flagSeller = sellRepo.getFlagByUsername(username);
@@ -254,11 +254,11 @@ public class RegisterService {
                 flagSeller = flagSeller +1;
 
                 sellRepo.updateFlagByUsername(flagSeller, username);
-                return new ResultEntity("Kode OTP salah, sisa coba: "+(3-flagSeller), ErrorCode.BIT_999);
+                return new ResultEntity<>("Kode OTP salah, sisa coba: "+(3-flagSeller), ErrorCode.BIT_999);
             }
             else{
                 otpRepo.updateFlag(1,username);
-                return new ResultEntity("User terblockir selama 1 hari", ErrorCode.BIT_999);
+                return new ResultEntity<>("User terblockir selama 1 hari", ErrorCode.BIT_999);
             }
         }
     }
