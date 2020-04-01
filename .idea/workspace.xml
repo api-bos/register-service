@@ -2,7 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/Verif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/database/bcaDataSourceConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/database/bosDataSourceConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/config/twillio/CustomNetworkClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/controller/ResController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterVerified.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/dto/RegisterVerif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bca/NasabahDim.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/OTPDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/OTPDim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/bos/SellerDim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/entity/SellerDim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bca/NasabahRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/OTPRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/OTPRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/bos/SellerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/repository/SellerRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/database/bcaDataSourceConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/database/bosDataSourceConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/config/twillio/CustomNetworkClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/controller/ResController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/controller/ResController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/dto/RegisterField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bos/register/dto/RegisterField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/dto/RegisterVerified.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bca/NasabahDim$NasabahDimBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bca/NasabahDim.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/OTPDim$OTPDimBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/OTPDim.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/SellerDim$SellerDimBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/entity/bos/SellerDim.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/repository/bca/NasabahRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/repository/bos/OTPRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/repository/bos/SellerRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bos/register/service/RegiService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +81,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bos.register.dto" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.bos.register.config.twillio" />
     </key>
@@ -123,38 +158,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="346" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1584341548932" />
-    <state width="1237" height="171" key="GridCell.Tab.0.bottom" timestamp="1585539185449">
+    <state width="1237" height="153" key="GridCell.Tab.0.bottom" timestamp="1585663734990">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585539185449" />
-    <state width="1237" height="171" key="GridCell.Tab.0.center" timestamp="1585539185449">
+    <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585663734990" />
+    <state width="1237" height="153" key="GridCell.Tab.0.center" timestamp="1585663734990">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585539185449" />
-    <state width="1237" height="171" key="GridCell.Tab.0.left" timestamp="1585539185449">
+    <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585663734990" />
+    <state width="1237" height="153" key="GridCell.Tab.0.left" timestamp="1585663734990">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585539185449" />
-    <state width="1237" height="171" key="GridCell.Tab.0.right" timestamp="1585539185449">
+    <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585663734990" />
+    <state width="1237" height="153" key="GridCell.Tab.0.right" timestamp="1585663734990">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585539185449" />
-    <state width="1237" height="171" key="GridCell.Tab.1.bottom" timestamp="1585539185450">
+    <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585663734990" />
+    <state width="1237" height="171" key="GridCell.Tab.1.bottom" timestamp="1585656523043">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585539185450" />
-    <state width="1237" height="171" key="GridCell.Tab.1.center" timestamp="1585539185450">
+    <state width="1237" height="171" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585656523043" />
+    <state width="1237" height="171" key="GridCell.Tab.1.center" timestamp="1585656523043">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1585539185450" />
-    <state width="1237" height="171" key="GridCell.Tab.1.left" timestamp="1585539185449">
+    <state width="1237" height="171" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1585656523043" />
+    <state width="1237" height="171" key="GridCell.Tab.1.left" timestamp="1585656523043">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1585539185449" />
-    <state width="1237" height="171" key="GridCell.Tab.1.right" timestamp="1585539185450">
+    <state width="1237" height="171" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1585656523043" />
+    <state width="1237" height="171" key="GridCell.Tab.1.right" timestamp="1585656523043">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="171" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1585539185450" />
+    <state width="1237" height="171" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1585656523043" />
     <state x="180" y="0" key="SettingsEditor" timestamp="1585284599657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -164,10 +199,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="232" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1582773407515" />
-    <state x="335" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1583223266806">
+    <state x="335" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1585703752160">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="335" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1583223266806" />
+    <state x="335" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585703752160" />
     <state x="284" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583121507472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -184,10 +219,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="337" y="72" width="606" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1583896771579" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1583403103123">
+    <state x="296" y="150" key="run.anything.popup" timestamp="1585659066166">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1583403103123" />
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1585659066166" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583896558919">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

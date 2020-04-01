@@ -1,6 +1,6 @@
-package com.bos.register.repository.bos;
+package com.bos.register.repository;
 
-import com.bos.register.entity.bos.OTPDim;
+import com.bos.register.entity.OTPDim;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -25,6 +25,6 @@ public interface OTPRepo extends JpaRepository<OTPDim, String> {
     @Query("UPDATE OTPDim SET flag = :flag WHERE username = :username")
     void updateFlag(@Param("flag") Integer flag, @Param("username") String username);
 
-    @Query(value = "SELECT * FROM OTPDim WHERE username = :username AND flag = :flag", nativeQuery = true)
-    OTPDim findOTPByUsername(@Param("username") String username, @Param("flag") Integer flag);
+    @Query("SELECT od.otpCode FROM OTPDim od WHERE od.username = :username AND od.flag = :flag")
+    Integer findOTPByUsername(@Param("username") String username, @Param("flag") Integer flag);
 }

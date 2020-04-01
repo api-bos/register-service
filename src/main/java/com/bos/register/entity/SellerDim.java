@@ -1,4 +1,4 @@
-package com.bos.register.entity.bos;
+package com.bos.register.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
@@ -30,9 +30,6 @@ public class SellerDim {
 
     @Column(name = "name")
     private String name;
-
-    @Column(name = "card_number")
-    private String cardNum;
 
     @Column(name = "phone")
     private String phone;

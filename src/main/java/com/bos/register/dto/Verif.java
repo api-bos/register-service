@@ -12,10 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class RegisterField {
-    private String bosId;
-    private String nama;
-    private String noRek;
-    private String noHp;
-    private String password;
+public class Verif {
+    private String acctNo;
+    private String mobileNum;
 }
