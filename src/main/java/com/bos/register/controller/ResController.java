@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/bos/regis")
+@CrossOrigin(origins = {"*"})
 public class ResController {
     @Autowired
     RegisterService service;
