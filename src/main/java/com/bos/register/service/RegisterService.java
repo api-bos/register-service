@@ -192,6 +192,7 @@ public class RegisterService {
             tmp_seller.setUsername(username);
             tmp_seller.setPassword(pw);
             tmp_seller.setFlag(0);
+            tmp_seller.setImagePath("");
             sellRepo.save(tmp_seller);
 
             //Send OTP
