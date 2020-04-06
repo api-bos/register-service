@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.bos.register.RegisterServiceApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.579 s - in com.bos.register.RegisterServiceApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.692 s - in com.bos.register.RegisterServiceApplicationTests

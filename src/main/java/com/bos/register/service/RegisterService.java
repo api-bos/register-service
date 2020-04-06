@@ -111,7 +111,8 @@ public class RegisterService {
 
     private Integer isNasabah(String acctNo, String phone){
         String result;
-        final String uri = "http://localhost:4422/bos/verif";
+//        final String uri = "http://localhost:4422/bos/verif";
+        final String uri = "http://dummybca.apps.pcf.dti.co.id/bos/verif";
         RestTemplate restTemplate = new RestTemplate();
 
         //setting up the request headers
