@@ -44,15 +44,19 @@ public class RegisterService {
         System.out.println("Done init twilio");
     }
 
-    private int createRandomNumber(){
+    private String createRandomNumber(){
         Random random = new Random();
         StringBuilder tmp_randomNumber = new StringBuilder();
+        String otp;
 
         for (int i=0; i<4; i++){
             tmp_randomNumber.append(random.nextInt(10));
         }
-        System.out.println("OTP: " + tmp_randomNumber);
-        return Integer.parseInt(tmp_randomNumber.toString());
+
+        otp = tmp_randomNumber.toString();
+
+        System.out.println("OTP: " + otp);
+        return otp;
     }
 
     private boolean sendOTP(String p_username, String p_phoneNumber) {
@@ -62,7 +66,7 @@ public class RegisterService {
 
         //Create random number yg tidak terdaftar di db
         while (!l_checkUniqueOTP){
-            l_otpCode = Integer.toString(createRandomNumber());
+            l_otpCode = createRandomNumber();
 
             if (otpRepo.findById(l_otpCode).equals(Optional.empty())){
                 OTPDim otp = new OTPDim();

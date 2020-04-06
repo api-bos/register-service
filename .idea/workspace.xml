@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="" />
+    <list default="true" id="cc5d14a8-e821-43ad-ab3d-5d5cd3b212cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bos/register/service/RegisterService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,6 +189,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="337" y="72" width="606" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1583896771579" />
+    <state x="22" y="35" key="new project wizard" timestamp="1586164586509">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="22" y="35" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1586164586509" />
     <state x="296" y="150" key="run.anything.popup" timestamp="1585659066166">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
